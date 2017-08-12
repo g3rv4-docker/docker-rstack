@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y build-essential gfortran libreadline-dev zlib1g-dev libbz2-dev liblzma-dev libpcre3-dev libpcre++-dev libcurl4-openssl-dev perl libssl-dev openssl ca-certificates wget pandoc libcairo2-dev libxt-dev gdebi-core && \
     update-ca-certificates
 
-ADD  https://cran.r-project.org/src/base/R-3/R-3.4.1.tar.gz /src
+ADD  R-3.4.1.tar.gz /src
 
 RUN cd /src/R-3.4.1 && \
     ./configure --with-x=no --with-cairo=yes --with-libpng=yes --disable-java && \
